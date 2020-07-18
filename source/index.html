@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>Седона</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Логотип города Седоны">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header__intro index-intro">
+       <img class="header-intro__image" src="https://via.placeholder.com/282x214" width="282" height="214" alt="Sedona-Welcome to the gorgeous">
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Поиск гостиниц в городе Седона</h1>
+    <section class="advantages">
+      <h2 class="advantages__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <div class="advantages__wrapper">
+        <ul class="advantages__list reasons">
+          <li class="reasons__item reasons__item--accent">
+            <h3 class="reasons__title reasons__title--accent">Настоящий городок</h3>
+            <p class="reasons__number reasons__number--accent">— №1 —</p>
+            <p class="reasons__text reasons__text--accent">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            <img class="reasons__image" src="https://via.placeholder.com/520x260" width="520" height="260" alt="Фото города Седоны">
+            <ul class="advantages__list recommendations">
+              <li class="recommendations__item recommendations__item--house">
+                <h4 class="recommendations__title">Жилье</h4>
+                <p class="recommendations__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              </li>
+              <li class="recommendations__item recommendations__item--gift">
+                <h4 class="recommendations__title">Сувениры</h4>
+                <p class="recommendations__description">Не только китайского, но и местного производства!</p>
+              </li>
+              <li class="recommendations__item recommendation__item--burger">
+                <h4 class="recommendations__title">Еда</h4>
+                <p class="recommendationts__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+            </ul>
+          </li>
+          <li class="reasons__item reasons__item--accent">
+            <h3 class="reasons__title reasons__title--accent">Там есть мост дьявола</h3>
+            <p class="reasons__number reasons__number--accent">— №2 —</p>
+            <p class="reasons__text reasons__text--accent">Да, но по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <img class="reasons__image" src="https://via.placeholder.com/520x260" width="520" height="260" alt="Фото моста дьявола">
+          </li>
+          <li class="reasons__item">
+            <h3 class="reasons__title">Небольшая площадь</h3>
+            <p class="reasons__number">— №3 —</p>
+            <p class="reasons__text">Все интересные места находятся очень близко</p>
+          </li>
+          <li class="reasons__item">
+            <h3 class="reasons__title">Красивая дорога</h3>
+            <p class="reasons__number">— №4 —</p>
+            <p class="reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="reasons__item">
+            <h3 class="reasons__title">Мало туристов</h3>
+            <p class="reasons__number">— №5 —</p>
+            <p class="reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="hotel-search-form">
+
+    </section>
+    <section class="map">
+
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__visit">#Visitsedona</p>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="https://via.placeholder.com/27x35" width="27" height="35" alt="HTML Academy">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
