@@ -32,7 +32,7 @@
         </ul>
       </nav>
       <div class="page-header__intro inner-intro">
-       <img class="inner-intro__image" src="https://via.placeholder.com/229x39" width="229" height="39" alt="Sedona">
+        <img class="inner-intro__image" src="https://via.placeholder.com/229x39" width="229" height="39" alt="Sedona">
       </div>
     </div>
   </header>
@@ -40,6 +40,87 @@
   <main class="page-main">
     <h1 class="page-main__title">Оставьте свой отзыв</h1>
     <p class="page-main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях</p>
+    <section class="review-form">
+      <h2 class="visually-hidden">Форма отзыва о городе Седона</h2>
+      <div class="review-form__wrapper">
+        <form class="review-form__form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="reviewer-name">
+            <legend class="reviewer-name__legend">Представьтесь:</legend>
+            <ul class="reviewer-name__list">
+              <li class="reviewer-name__item">
+                <label class="reviewer-name__label" for="name">Имя*:</label>
+                <input class="reviewer-name__input" type="text" name="name" id="name" placeholder="Петр" required>
+              </li>
+              <li class="reviewer-name__item">
+                <label class="reviewer-name__label" for="surname">Фамилия*:</label>
+                <input class="reviewer-name__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+              </li>
+              <li class="reviewer-name__item">
+                <label class="reviewer-name__label" for="middle-name">Отчество:</label>
+                <input class="reviewer-name__input" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviewer-contacts">
+            <legend class="reviewer-name__legend">Контактная информация:</legend>
+            <ul class="reviewer-contacts__list">
+              <li class="reviewer-contacts__item">
+                <label class="reviewer-contacts__label" for="telephone">Контактный телефон*:</label>
+                <input class="reviewer-contacts__input" type="tel" name="tel" id="telephone" placeholder="Введите телефон" required>
+              </li>
+              <li class="reviewer-contacts__item">
+                <label class="reviewer-contacts__label" for="email">Электронная почта*:</label>
+                <input class="reviewer-contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviewer-impressions">
+            <legend class="reviewer-impressions__legend">Общие впечатления:</legend>
+            <ul class="reviewer-impressions__list">
+              <li class="reviewer-impressions__item">
+                <input class="reviewer-impressions__radio" type="radio" name="impressions" value="good" id="impressions-good" checked>
+                <label class="reviewer-impressions__label" for="impressions-good">Скорее положительное</label>
+              </li>
+              <li class="reviewer-impressions__item">
+                <input class="reviewer-impressions__radio" type="radio" name="impressions" value="bad" id="impressions-bad">
+                <label class="reviewer-impressions__label" for="impressions-bad">Скорее отрицательное</label>
+              </li>
+              <li class="reviewer-impressions__item">
+                <input class="reviewer-impressions__radio" type="radio" name="impressions" value="unsure" id="impressions-unsure">
+                <label class="reviewer-impressions__label" for="impressions-unsure">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="places-visited">
+            <legend class="places-visited__legend">Посещенные достопримечательности:</legend>
+            <ul class="places-visited__list">
+              <li class="places-visited__item">
+                <input class="places-visited__checkbox" type="checkbox" name="bridge" id="places-bridge" checked>
+                <label class="places-visited__label" for="places-bridge">Мост Дьявола</label>
+              </li>
+              <li class="places-visited__item">
+                <input class="places-visited__checkbox" type="checkbox" name="bell" id="places-bell" checked>
+                <label class="places-visited__label" for="places-bell">Гора-Колокол</label>
+              </li>
+              <li class="places-visited__item">
+                <input class="places-visited__checkbox" type="checkbox" name="park" id="places-park" checked>
+                <label class="places-visited__label" for="places-park">Слайд-парк</label>
+              </li>
+              <li class="places-visited__item">
+                <input class="places-visited__checkbox" type="checkbox" name="cliff" id="places-cliff">
+                <label class="places-visited__label" for="places-cliff">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review">
+            <legend class="review__legend">Опишите свои эмоции:</legend>
+            <label for="review"><span class="visually-hidden">Ваш отзыв</span></label>
+            <textarea class="review__text" name="review" id="review" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="review-form__button button" type="submit">Отправить отзыв</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 
