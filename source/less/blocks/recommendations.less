@@ -1,8 +1,18 @@
 .recommendations {
-  margin: 0;
-  padding: 0;
+  .margin-padding;
   list-style: none;
   line-height: 21px;
-  color: #333333;
-  background-color: #ffffff;
+  color: @text-color;
+  background-color: @background;
+}
+
+.recommendations__title {
+  .margin-padding;
+  .font-main-heading;
+  color: @heading-color;
+}
+
+.recommendations__description {
+  .margin-padding;
+  line-height: 21px;
 }
