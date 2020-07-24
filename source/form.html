@@ -3,47 +3,51 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма отзыва о городе Седона</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page-body">
+<body class="page__body">
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a>Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="page-header__intro inner-intro">
-        <img class="inner-intro__image" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
-      </div>
-    </div>
-  </header>
+  <nav class="main-nav">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item">
+        <a href="index.html">Главная</a>
+      </li>
+      <li class="site-list__item">
+        <a href="photo.html">Фото и видео</a>
+      </li>
+      <li class="site-list__item site-list__item--logo">
+        <a href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+        </a>
+      </li>
+      <li class="site-list__item site-list__item--active">
+        <a>Форма отзыва</a>
+      </li>
+      <li class="site-list__item">
+        <a href="#">HTML Academy</a>
+      </li>
+    </ul>
+  </nav>
+  <a href="index.html" class="page-header__logo">
+    <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+  </a>
+  <div class="page-header__intro index-intro">
+    <img class="header-intro__image" src="img/text-sedona-index.svg" width="282" height="214" alt="Sedona-Welcome to the gorgeous">
+  </div>
+</header>
 
   <main class="page-main">
     <h1 class="page-main__title">Оставьте свой отзыв</h1>
     <p class="page-main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях</p>
     <section class="review-form">
       <h2 class="visually-hidden">Форма отзыва о городе Седона</h2>
-      <div class="review-form__wrapper">
+      <div class="review-set__wrapper">
         <form class="review-form__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="reviewer-name field-set">
             <legend class="reviewer-name__legend legend">Представьтесь:</legend>

@@ -3,11 +3,23 @@
   padding-bottom: 26px;
   text-align: center;
   line-height: 26px;
-  color: @heading-color;
+  color: @color-heading;
 }
 
 .page-footer__visit {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+}
+
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

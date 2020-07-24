@@ -2,14 +2,24 @@
   .margin-padding ();
   list-style: none;
   line-height: 21px;
-  color: @text-color;
-  background-color: @background;
+  color: @color-text;
+  background-color: @color-background;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    width: 768px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .recommendations__title {
   .margin-padding ();
   .font-main-heading ();
-  color: @heading-color;
+  color: @color-heading;
 }
 
 .recommendations__description {

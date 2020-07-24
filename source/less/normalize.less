@@ -1,13 +1,3 @@
-body {
-  .margin-padding;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  text-transform: uppercase;
-  background-color: @background;
-  color: @text-color;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -71,15 +61,6 @@ progress {
   vertical-align: baseline;
 }
 
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 details {
   display: block;
 }
@@ -88,9 +69,7 @@ summary {
   display: list-item;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

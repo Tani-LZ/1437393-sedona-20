@@ -5,10 +5,24 @@
   text-align: center;
 }
 
+.advantages__header {
+  width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 520px;
+  }
+}
+
 .advantages__title {
   .margin-padding ();
   .font-main-heading ();
-  color: @heading-color;
+  color: @color-heading;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .advantages__text {

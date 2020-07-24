@@ -7,6 +7,31 @@
 .photo__list {
   .margin-padding ();
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.photo__item {
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
+}
+
+.photo__item-top {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .photo__title {
@@ -14,7 +39,7 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  color: @heading-color;
+  color: @color-heading;
 }
 
 .photo__author {
