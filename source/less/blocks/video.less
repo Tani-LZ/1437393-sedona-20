@@ -3,9 +3,24 @@
   margin-bottom: 49px;
 }
 
+.video__header {
+  width: 266px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 445px;
+  }
+}
+
 .video__title {
   .margin-padding ();
   .font-main-heading ();
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .video__text {
