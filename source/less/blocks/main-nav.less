@@ -1,4 +1,6 @@
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   .margin-padding ();
   text-align: center;
   font-weight: bold;
@@ -10,6 +12,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 730px;
     margin: 0 auto;
@@ -41,6 +44,7 @@
 
 .site-list__item--logo {
   @media (max-width: @mobile-width-only) {
-    display: none;
+    background-color: @color-background;
+    order: 1;
   }
 }

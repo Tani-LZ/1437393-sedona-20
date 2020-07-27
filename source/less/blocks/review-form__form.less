@@ -1,19 +1,109 @@
-.field-set {
-  border: none;
+.review-form__form {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
 }
 
 .legend {
   .font-main-heading ();
   color: @color-heading;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
-.fieldset-list {
+.reviewer-name__list,
+.reviewer-contacts__list,
+.reviewer-impressions__list,
+.places-visited__list {
   .margin-padding ();
   list-style: none;
 }
 
+.reviewer-name {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    margin-bottom: 70px;
+  }
+}
+
+.reviewer-contacts {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 51px;
+  }
+}
+
+.reviewer-impressions {
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 472px;
+  }
+}
+
+.places-visited {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 73px;
+  }
+}
+
+.review {
+  margin-bottom: 51px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 58px;
+  }
+}
+
 .label {
   line-height: 26px;
+}
+
+.reviewer-contacts__label {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+.reviewer-contacts__label span {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .radio-label,
@@ -23,8 +113,86 @@
   text-transform: none;
 }
 
-.button {
+.button__wrapper {
+  width: 280px;
+  margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-bottom: 66px;
+  }
+}
+
+.review-form__required {
+  .margin-padding ();
+  line-height: 26px;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.review-form__button {
+  .margin-padding ();
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 18px;
+  padding-bottom: 13px;
   .button ();
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+  }
+}
+
+.reviewer-contacts__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.places-visited__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.places-visited__item {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+  }
+}
+
+.review__text {
+  width: 100%;
 }

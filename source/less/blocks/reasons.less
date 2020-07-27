@@ -31,6 +31,8 @@
 }
 
 .reasons__item {
+  background-color: @color-backgroundreasons;
+
   @media (min-width: @tablet-width) {
     width: 256px;
   }
@@ -59,7 +61,7 @@
   }
 }
 
-.accent-top__header {
+.reasons__item-header {
   background-color: @color-sitetheme;
 
   @media (min-width: @tablet-width) {
@@ -75,17 +77,5 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row-reverse;
-  }
-}
-
-.accent-bottom__header {
-  background-color: @color-sitetheme;
-
-  @media (min-width: @tablet-width) {
-    width: 256px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 400px;
   }
 }
