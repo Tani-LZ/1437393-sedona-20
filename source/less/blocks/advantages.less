@@ -1,6 +1,6 @@
 .advantages {
   margin-top: 32px;
-  margin-bottom: 33px;
+  margin-bottom: 58px;
   line-height: 26px;
   text-align: center;
 }
@@ -8,9 +8,17 @@
 .advantages__header {
   width: 270px;
   margin: 0 auto;
+  margin-bottom: 48px;
 
   @media (min-width: @tablet-width) {
     width: 520px;
+    margin-top: 43px;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
+    margin-bottom: 42px;
   }
 }
 
@@ -18,10 +26,12 @@
   .margin-padding ();
   .font-main-heading ();
   color: @color-heading;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 26px;
+    margin-bottom: 30px;
   }
 }
 
