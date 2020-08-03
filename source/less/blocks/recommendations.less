@@ -1,28 +1,112 @@
 .recommendations {
   .margin-padding ();
+  margin: 0 auto;
+  padding-top: 26px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   line-height: 21px;
   color: @color-text;
   background-color: @color-background;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    width: 768px;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 700px;
+    min-height: 330px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+    justify-content: flex-start;
+    padding-left: 58px;
+  }
+}
+
+.recommendations__item {
+  position: relative;
+  width: 262px;
+  margin-left: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
   }
 }
 
 .recommendations__title {
   .margin-padding ();
   .font-main-heading ();
+  margin-bottom: 15px;
+  padding-top: 9px;
+  padding-left: 52px;
+  text-align: left;
   color: @color-heading;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    font-size: 21px;
+    text-align: center;
+  }
 }
 
 .recommendations__description {
   .margin-padding ();
+  padding-left: 52px;
   line-height: 21px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.recommendations__item--house {
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 123px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 282px;
+  }
+}
+
+.recommendations__item--gift {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 193px;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    padding-top: 134px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 192px;
+    margin-left: 153px;
+    padding-top: 124px;
+  }
+}
+
+.recommendation__item--burger {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 155px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 122px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    margin-left: 111px;
+  }
 }

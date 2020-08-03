@@ -1,4 +1,7 @@
 .main-nav__list {
+  position: relative;
+  width: auto;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   .margin-padding ();
@@ -13,19 +16,175 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 730px;
-    margin: 0 auto;
-    background-color: @color-background;
+    justify-content: flex-start;
+    width: 768px;
+    font-size: 14px;
+    line-height: 26px;
+    color: @color-heading;
+    background-color: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1070px;
+    width: 1200px;
+  }
+}
+
+.site-list__item {
+  @media (min-width: @tablet-width) {
+    width: 20%;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 23px;
+  height: 22px;
+  background-color: @color-background;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: @color-sitetheme;
+  box-shadow: 0 9px 0 0 @color-sitetheme, 0 18px 0 0 @color-sitetheme;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade(@color-sitetheme, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@color-sitetheme, 60%),
+    0 18px 0 0 fade(@color-sitetheme, 60%);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@color-sitetheme, 30%);
+  box-shadow:
+    0 9px 0 0 fade(@color-sitetheme, 30%),
+    0 18px 0 0 fade(@color-sitetheme, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 17px;
+  right: 20px;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    right: 0;
+    width: 27px;
+    height: 4px;
+    background-color: @color-background;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(@color-background, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@color-background, 30%);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: static;
+    min-height: 0;
+  }
+}
+
+.main-nav--nojs .site-list__item {
+  @media (max-width: @mobile-width-only) {
+    display: block;
   }
 }
 
 .main-nav__list a {
+  position: relative;
+  display: block;
+  .margin-padding ();
   color: @color-background;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 14px;
+    padding-top: 15px;
+    box-shadow: none;
+  }
+}
+
+.main-nav__list a:hover {
+  background-color: #669ec0;
+}
+
+.main-nav__list a:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.site-list__item--logo a:hover,
+.site-list__item--logo a:active {
+  background-color: transparent;
+}
+
+.site-list__item--logo a {
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.main-nav--closed .site-list__item {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  &--logo {
+    display: block;
+  }
+}
+
+.site-list__item:last-child {
+  box-shadow: inset 0 -5px 7px -1px rgba(0, 0, 0, 0.2);
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+  }
 }
 
 .site-list__item a {
@@ -33,12 +192,33 @@
     font-size: 14px;
     line-height: 26px;
     color: @color-heading;
+    box-shadow: none;
   }
 }
 
-.main-nav__toggle {
+.site-list__item a[href] {
   @media (min-width: @tablet-width) {
-    display: none;
+    &:hover {
+      color: @color-sitetheme;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: fade(@color-heading, 30%);
+    }
+  }
+}
+
+.site-list__item--active a {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: #604e43;
+      background-color: @color-background;
+    }
+
+    &:active {
+      color: fade(#766357, 30%);
+    }
   }
 }
 
@@ -47,4 +227,10 @@
     background-color: @color-background;
     order: 1;
   }
+}
+
+.main-nav__logo {
+  display: block;
+  .margin-padding ();
+  margin: 0 auto;
 }

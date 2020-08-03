@@ -1,8 +1,29 @@
 .social__list {
   .margin-padding ();
+  margin-left: 84px;
+  margin-right: 85px;
+  margin-bottom: 40px;
+  width: 139px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
 }
 
 .social__item {
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
   background-color: @color-sitetheme;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__link--fill path {
+  fill: @color-background;
 }
