@@ -11,7 +11,7 @@
   line-height: 40px;
   list-style: none;
   color: @color-background;
-  background-color: @color-sitetheme;
+
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -26,6 +26,55 @@
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+  }
+}
+
+.main-nav--closed {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    height: 445px;
+    margin: 0 auto;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+.main-nav--opened {
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    height: 678px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+.main-nav::after {
+  @media (max-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 57px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+}
+
+.page-header--inner .main-nav--closed {
+  @media (max-width: @mobile-width-only) {
+    height: 214px;
+    background-position: top 56px center;
+  }
+}
+
+.page-header--inner .main-nav--opened {
+  @media (max-width: @mobile-width-only) {
+    height: 437px;
+    background-position: bottom -233px center;
   }
 }
 
@@ -126,12 +175,6 @@
   }
 }
 
-.main-nav--nojs .site-list__item {
-  @media (max-width: @mobile-width-only) {
-    display: block;
-  }
-}
-
 .main-nav__list a {
   position: relative;
   display: block;
@@ -145,6 +188,12 @@
     padding: 14px 14px;
     padding-top: 15px;
     box-shadow: none;
+  }
+}
+
+.site-list__item:not(.site-list__item--logo) a {
+  @media (max-width: @mobile-width-only) {
+    background-color: @color-sitetheme;
   }
 }
 
@@ -224,8 +273,14 @@
 
 .site-list__item--logo {
   @media (max-width: @mobile-width-only) {
-    background-color: @color-background;
+    background-color: transparent;
     order: 1;
+  }
+}
+
+.main-nav--nojs .site-list__item {
+  @media (max-width: @mobile-width-only) {
+    display: block;
   }
 }
 
@@ -233,4 +288,13 @@
   display: block;
   .margin-padding ();
   margin: 0 auto;
+}
+
+.index-intro {
+  position: absolute;
+  content: "";
+  width: 282px;
+  height: 214px;
+  left: 19px;
+  bottom: -89px;
 }

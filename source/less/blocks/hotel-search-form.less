@@ -1,6 +1,14 @@
 .hotel-search-form {
   text-align: center;
   margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .hotel-search-form__wrapper {
@@ -16,7 +24,7 @@
 
 .hotel-search-form__title {
   .margin-padding ();
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -25,7 +33,7 @@
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 26px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
 }
 
@@ -37,12 +45,17 @@
   display: block;
   width: 280px;
   padding-top: 14px;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
   margin: 0 auto;
   margin-top: 27px;
   .button ();
 
   @media (min-width: @tablet-width) {
     width: 458px;
+    margin-top: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 43px;
   }
 }
