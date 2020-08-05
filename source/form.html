@@ -34,8 +34,8 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro index-intro">
-      <img class="header-intro__image" src="img/text-sedona-index.svg" width="282" height="214" alt="Sedona-Welcome to the gorgeous">
+    <div class="page-header__intro inner-intro">
+      <img class="header-intro__image" src="img/text-sedona.svg" width="229" height="39" height="214" alt="Sedona-Welcome to the gorgeous">
     </div>
   </header>
 
@@ -43,7 +43,7 @@
     <h1 class="visually-hidden">Форма отзыва о городе Седона</h1>
     <section class="review-form">
       <div class="review-form__header">
-        <h2 class="page-main__title">Оставьте свой отзыв</h2>
+        <h2 class="page-main__title form-header__title">Оставьте свой отзыв</h2>
         <p class="page-main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях</p>
       </div>
       <form class="review-form__form" action="https://echo.htmlacademy.ru" method="get">
@@ -51,16 +51,16 @@
           <legend class="reviewer-name__legend legend">Представьтесь:</legend>
           <ul class="reviewer-name__list">
             <li class="reviewer-name__item">
-              <label class="reviewer-name__label label" for="name">Имя*:</label>
-              <input class="reviewer-name__input" type="text" name="name" id="name" placeholder="Петр" required>
+              <label class="reviewer-name__label reviewer-name__label--name label" for="name">Имя*:</label>
+              <input class="reviewer-name__input reviewer-name__input--name" type="text" name="name" id="name" placeholder="Петр" required>
             </li>
             <li class="reviewer-name__item">
-              <label class="reviewer-name__label label" for="surname">Фамилия*:</label>
-              <input class="reviewer-name__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+              <label class="reviewer-name__label reviewer-name__label--surname label" for="surname">Фамилия*:</label>
+              <input class="reviewer-name__input reviewer-name__input--surname" type="text" name="surname" id="surname" placeholder="Иванов" required>
             </li>
             <li class="reviewer-name__item">
-              <label class="reviewer-name__label label" for="middle-name">Отчество:</label>
-              <input class="reviewer-name__input" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
+              <label class="reviewer-name__label reviewer-name__label--middle-name label" for="middle-name">Отчество:</label>
+              <input class="reviewer-name__input reviewer-name__input--middle-name" type="text" name="middle-name" id="middle-name" placeholder="Александрович">
             </li>
           </ul>
         </fieldset>
@@ -68,17 +68,17 @@
           <legend class="reviewer-contacts__legend legend">Контактная информация:</legend>
           <ul class="reviewer-contacts__list">
             <li class="reviewer-contacts__item">
-              <label class="reviewer-contacts__label label" for="telephone"><span>Контактный</span> телефон*:</label>
+              <label class="reviewer-contacts__label reviewer-contacts__label--tel label" for="telephone"><span>Контактный</span> телефон*:</label>
               <input class="reviewer-contacts__input" type="tel" name="tel" id="telephone" placeholder="Введите телефон" required>
             </li>
             <li class="reviewer-contacts__item">
-              <label class="reviewer-contacts__label label" for="email">Электронная почта*:</label>
+              <label class="reviewer-contacts__label reviewer-contacts__label--email label" for="email">Электронная почта*:</label>
               <input class="reviewer-contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
             </li>
           </ul>
         </fieldset>
         <fieldset class="reviewer-impressions">
-          <legend class="reviewer-impressions__legend legend">Общие впечатления:</legend>
+          <legend class="reviewer-impressions__legend legend">Ваше общее впечатление:</legend>
           <ul class="reviewer-impressions__list">
             <li class="reviewer-impressions__item">
               <input class="reviewer-impressions__radio" type="radio" name="impressions" value="good" id="impressions-good" checked>
@@ -99,26 +99,26 @@
           <ul class="places-visited__list">
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="bridge" id="places-bridge" checked>
-              <label class="places-visited__label checkbox-label" for="places-bridge">Мост Дьявола</label>
+              <label class="places-visited__label places-visited__label--bridge checkbox-label" for="places-bridge">Мост Дьявола</label>
             </li>
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="bell" id="places-bell" checked>
-              <label class="places-visited__label checkbox-label" for="places-bell">Гора-Колокол</label>
+              <label class="places-visited__label places-visited__label--bridge--bell checkbox-label" for="places-bell">Гора-Колокол</label>
             </li>
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="park" id="places-park" checked>
-              <label class="places-visited__label checkbox-label" for="places-park">Слайд-парк</label>
+              <label class="places-visited__label places-visited__label--bridge--park checkbox-label" for="places-park">Слайд-парк</label>
             </li>
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="cliff" id="places-cliff">
-              <label class="places-visited__label checkbox-label" for="places-cliff">Красные скалы</label>
+              <label class="places-visited__label places-visited__label--cliff checkbox-label" for="places-cliff">Красные скалы</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="review">
           <legend class="review__legend legend">Опишите свои эмоции:</legend>
           <label for="review"><span class="visually-hidden">Ваш отзыв</span></label>
-          <textarea class="review__text" name="review" id="review" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="review__text" name="review" id="review" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <div class="button__wrapper">
           <button class="review-form__button button" type="submit">Отправить отзыв</button>
@@ -136,7 +136,8 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span>
-              <svg class="social__link--fill" width="18" height="15" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <svg class="social__link--fill" width="18" height="15" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                 <g id="W6EeEF_1_">
                   <g>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
@@ -147,14 +148,16 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg class="social__link--fill" width="9" height="19" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+              <svg class="social__link--fill" width="9" height="19" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
                 <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span>
-              <svg class="social__link--fill" width="20" height="14" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+              <svg class="social__link--fill" width="20" height="14" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
               </svg>
             </a>
