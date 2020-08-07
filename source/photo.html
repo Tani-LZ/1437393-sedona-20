@@ -23,7 +23,11 @@
         </li>
         <li class="site-list__item site-list__item--logo">
           <a class="page-header__logo" href="index.html">
-            <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+            </picture>
           </a>
         </li>
         <li class="site-list__item">
@@ -34,8 +38,8 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro inner-intro">
-      <img class="header-intro__image" src="img/text-sedona.svg" width="229" height="39" alt="Sedona-Welcome to the gorgeous">
+    <div class="page-header__intro page-header__intro--inner">
+      <img class="header-intro__image header-intro__image--inner" src="img/text-sedona.svg" width="229" height="39" alt="Sedona-Welcome to the gorgeous">
     </div>
   </header>
 
@@ -49,7 +53,13 @@
       <ul class="photo__list">
         <li class="photo__item photo__item--top">
           <figure class="photo__content photo__content--top">
-            <a class="photo__link" href="#"><img class="photo__image photo__image--top" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы"></a>
+            <a class="photo__link" href="#">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                <img class="photo__image photo__image--top" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
+              </picture>
+            </a>
             <figcaption class="photo__description photo__description--top">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__author">Автор фото: Борис</p>
@@ -59,7 +69,13 @@
         </li>
         <li class="photo__item">
           <figure class="photo__content">
-            <a class="photo__link" href="#"><img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность"></a>
+            <a class="photo__link" href="#">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" width="280" height="280" alt="Местная растительность">
+              </picture>
+            </a>
             <figcaption class="photo__description">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__author">Автор фото: Сергей</p>
@@ -69,7 +85,13 @@
         </li>
         <li class="photo__item">
           <figure class="photo__content">
-            <a class="photo__link" href="#"><img class="photo__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север"></a>
+            <a class="photo__link" href="#">
+              <picture>
+                <source @media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                <source @media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" width="280" height="280" alt="Дорога на север">
+              </picture>
+            </a>
             <figcaption class="photo__description">
               <h3 class="photo__title">Дорога на север</h3>
               <p class="photo__author">Автор фото: Петр</p>
@@ -79,7 +101,13 @@
         </li>
         <li class="photo__item">
           <figure class="photo__content">
-            <a class="photo__link" href="#"><img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола"></a>
+            <a class="photo__link" href="#">
+              <picture>
+                <source @media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source @media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="280" height="280" alt="Мост дьявола">
+              </picture>
+            </a>
             <figcaption class="photo__description">
               <h3 class="photo__title">Мост дьявола</h3>
               <p class="photo__author">Автор фото: Антон</p>

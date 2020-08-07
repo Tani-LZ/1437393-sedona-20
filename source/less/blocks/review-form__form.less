@@ -102,7 +102,7 @@
   padding-bottom: 14px;
   .font-main-heading ();
   border: none;
-  background-color: #f2f2f2;
+  background-color: @color-formbackground;
 }
 
 .reviewer-name__input--name {
@@ -215,6 +215,7 @@
 }
 
 .reviewer-contacts__item {
+  position: relative;
   margin-bottom: 14px;
 
   @media (min-width: @desktop-width) {
@@ -272,7 +273,7 @@
   padding-bottom: 14px;
   .font-main-heading ();
   border: none;
-  background-color: #f2f2f2;
+  background-color: @color-formbackground;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -281,6 +282,18 @@
   @media (min-width: @desktop-width) {
     width: 316px;
   }
+}
+
+.reviewer-contacts__input:hover,
+.reviewer-contacts__input:focus,
+.reviewer-name__input:hover,
+.reviewer-name__input:focus {
+  background-color: #e5e5e5;
+}
+
+.reviewer-contacts__input:active {
+  background-color: @color-background;
+  border: 4px solid #e5e5e5;
 }
 
 .reviewer-impressions {
@@ -334,14 +347,14 @@
 }
 
 .reviewer-impressions__label {
-  padding-left: 62px;
+  padding-left: 77px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 75px;
+    padding-left: 91px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 182px;
+    padding-left: 200px;
   }
 }
 
@@ -473,7 +486,7 @@
   }
 }
 
-.places-visited__label--bridge--park {
+.places-visited__label--bridge-park {
   @media (min-width: @desktop-width) {
     padding-left: 100px;
   }
@@ -537,7 +550,7 @@
   padding-left: 21px;
   .font-main-heading ();
   border: none;
-  background-color: #f2f2f2;
+  background-color: @color-formbackground;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -548,9 +561,65 @@
 
 .radio-label,
 .checkbox-label {
+  display: block;
+  position: relative;
   .font-main-heading ();
   color: @color-heading;
   text-transform: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reviewer-impressions__radio + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 2px;
+  width: 53px;
+  height: 53px;
+  background-color: @color-formbackground;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 18px;
+    background-color: @color-formbackground;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 125px;
+  }
+}
+
+.reviewer-impressions__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2;
+  left: 18px;
+  width: 21px;
+  height: 21px;
+  background-color: @color-text;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 140px;
+  }
+}
+
+.reviewer-impressions__radio:hover + label::before,
+.reviewer-impressions__radio:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+.reviewer-impressions__radio:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.reviewer-impressions__radio:active + label::after {
+  opacity: 0.3;
 }
 
 .button__wrapper {
