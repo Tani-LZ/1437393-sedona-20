@@ -1,20 +1,23 @@
 .recommendations {
   .margin-padding ();
   margin: 0 auto;
-  padding-top: 26px;
   width: 320px;
   display: flex;
   flex-direction: column;
+  padding-top: 35px;
+  padding-bottom: 33px;
   list-style: none;
   line-height: 21px;
   color: @color-text;
   background-color: @color-background;
 
   @media (min-width: @tablet-width) {
-    width: 700px;
+    width: 768px;
     min-height: 330px;
+    padding-top: 0;
+    padding-bottom: 0;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,26 +28,74 @@
 }
 
 .recommendations__item {
+  .margin-padding ();
   position: relative;
-  width: 262px;
-  margin-left: 18px;
+  padding-left: 70px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 0;
     margin-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.recommendations__item:last-child {
+  margin-bottom: 0;
+}
+
+.recommendations__item--house {
+  @media (min-width: @tablet-width) {
+    width: 185px;
+    margin-left: 36px;
+    margin-right: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 282px;
+    margin-left: 0;
+    margin-right: 111px;
+  }
+}
+
+.recommendation__item--burger {
+  padding-right: 70px;
+
+  @media (min-width: @tablet-width) {
+    width: 155px;
+    padding-right: 0;
+    margin-right: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    margin-right: 127px;
+  }
+}
+
+.recommendations__item--gift {
+  @media (min-width: @tablet-width) {
+    width: 193px;
+    order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
   }
 }
 
 .recommendations__title {
   .margin-padding ();
   .font-main-heading ();
-  margin-bottom: 15px;
-  padding-top: 9px;
-  padding-left: 52px;
+  margin-bottom: 16px;
   text-align: left;
   color: @color-heading;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
+    padding-top: 158px;
+    margin-bottom: 23px;
     font-size: 21px;
     text-align: center;
   }
@@ -52,61 +103,10 @@
 
 .recommendations__description {
   .margin-padding ();
-  padding-left: 52px;
   line-height: 21px;
   text-align: left;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
     text-align: center;
-  }
-}
-
-.recommendations__item--house {
-  margin-bottom: 16px;
-
-  @media (min-width: @tablet-width) {
-    width: 185px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 123px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 282px;
-  }
-}
-
-.recommendations__item--gift {
-  margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 193px;
-    display: flex;
-    flex-direction: column;
-    order: 1;
-    padding-top: 134px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 192px;
-    margin-left: 153px;
-    padding-top: 124px;
-  }
-}
-
-.recommendation__item--burger {
-  margin-bottom: 35px;
-
-  @media (min-width: @tablet-width) {
-    width: 155px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 122px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 300px;
-    margin-left: 111px;
   }
 }
