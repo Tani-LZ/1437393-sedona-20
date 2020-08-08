@@ -1,13 +1,25 @@
 .map {
+  width: 320px;
   .margin-padding ();
+  margin: 0 auto;
   margin-bottom: 10px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
   }
 }
 
 .map__wrapper p {
   .margin-padding ();
+}
+
+.map-image {
+  display: block;
+  width: 100%;
 }

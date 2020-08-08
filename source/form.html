@@ -23,7 +23,11 @@
         </li>
         <li class="site-list__item site-list__item--logo">
           <a class="page-header__logo" href="index.html">
-            <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седоны">
+            </picture>
           </a>
         </li>
         <li class="site-list__item site-list__item--active">
@@ -34,8 +38,8 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro inner-intro">
-      <img class="header-intro__image" src="img/text-sedona.svg" width="229" height="39" height="214" alt="Sedona-Welcome to the gorgeous">
+    <div class="page-header__intro page-header__intro--inner">
+      <img class="header-intro__image header-intro__image--inner" src="img/text-sedona.svg" width="229" height="39" height="214" alt="Sedona-Welcome to the gorgeous">
     </div>
   </header>
 
@@ -81,15 +85,15 @@
           <legend class="reviewer-impressions__legend legend">Ваше общее впечатление:</legend>
           <ul class="reviewer-impressions__list">
             <li class="reviewer-impressions__item">
-              <input class="reviewer-impressions__radio" type="radio" name="impressions" value="good" id="impressions-good" checked>
+              <input class="visually-hidden reviewer-impressions__radio" type="radio" name="impressions" value="good" id="impressions-good" checked>
               <label class="reviewer-impressions__label radio-label" for="impressions-good">Скорее положительное</label>
             </li>
             <li class="reviewer-impressions__item">
-              <input class="reviewer-impressions__radio" type="radio" name="impressions" value="bad" id="impressions-bad">
+              <input class="visually-hidden reviewer-impressions__radio" type="radio" name="impressions" value="bad" id="impressions-bad">
               <label class="reviewer-impressions__label radio-label" for="impressions-bad">Скорее отрицательное</label>
             </li>
             <li class="reviewer-impressions__item">
-              <input class="reviewer-impressions__radio" type="radio" name="impressions" value="unsure" id="impressions-unsure">
+              <input class="visually-hidden reviewer-impressions__radio" type="radio" name="impressions" value="unsure" id="impressions-unsure">
               <label class="reviewer-impressions__label radio-label" for="impressions-unsure">Затрудняюсь ответить</label>
             </li>
           </ul>
@@ -107,7 +111,7 @@
             </li>
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="park" id="places-park" checked>
-              <label class="places-visited__label places-visited__label--bridge--park checkbox-label" for="places-park">Слайд-парк</label>
+              <label class="places-visited__label places-visited__label--bridge-park checkbox-label" for="places-park">Слайд-парк</label>
             </li>
             <li class="places-visited__item">
               <input class="places-visited__checkbox" type="checkbox" name="cliff" id="places-cliff">
