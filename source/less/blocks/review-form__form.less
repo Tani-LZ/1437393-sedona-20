@@ -37,6 +37,7 @@
 }
 
 .reviewer-name {
+  position: relative;
   width: 320px;
   .margin-padding ();
   margin-bottom: 20px;
@@ -51,6 +52,18 @@
   @media (min-width: @desktop-width) {
     width: 50%;
     margin-bottom: 70px;
+  }
+}
+
+.reviewer-name::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 292px;
+    top: 0;
+    left: -1px;
+    background-color: #dbdbdb;
   }
 }
 
@@ -267,6 +280,7 @@
 }
 
 .reviewer-contacts__input {
+  .margin-padding ();
   width: 280px;
   padding-left: 22px;
   padding-top: 18px;
@@ -282,6 +296,43 @@
   @media (min-width: @desktop-width) {
     width: 316px;
   }
+}
+
+.icon-tel {
+  position: absolute;
+  content: "";
+  .margin-padding ();
+  border: none;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: top 20px right 20px;
+
+  @media (min-width: @desktop-width) {
+    bottom: 0;
+    left: 345px;
+  }
+}
+
+.icon-email {
+  position: absolute;
+  content: "";
+  .margin-padding ();
+  border: none;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: top 20px right 20px;
 }
 
 .reviewer-contacts__input:hover,
@@ -467,35 +518,119 @@
 }
 
 .places-visited__label {
-  padding-left: 63px;
+  padding-left: 80px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 75px;
+    padding-left: 90px;
   }
 }
 
 .places-visited__label--bridge {
   @media (min-width: @desktop-width) {
-    padding-left: 63px;
+    padding-left: 81px;
   }
 }
 
-.places-visited__label--bridge--bell {
-  @media (min-width: @desktop-width) {
-    padding-left: 83px;
-  }
-}
-
-.places-visited__label--bridge-park {
+.places-visited__label--bell {
   @media (min-width: @desktop-width) {
     padding-left: 100px;
   }
 }
 
+.places-visited__label--park {
+  @media (min-width: @desktop-width) {
+    padding-left: 118px;
+  }
+}
+
 .places-visited__label--cliff {
   @media (min-width: @desktop-width) {
-    padding-left: 99px;
+    padding-left: 116px;
   }
+}
+
+.places-visited__checkbox + label::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  top: -16px;
+  left: 0;
+  background-color: @color-formbackground;
+  border-radius: 5%;
+
+  @media (min-width: @tablet-width) {
+    left: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+  }
+}
+
+.places-visited__checkbox--bell + label::before {
+  @media (min-width: @desktop-width) {
+    left: 20px;
+  }
+}
+
+.places-visited__checkbox--park + label::before {
+  @media (min-width: @desktop-width) {
+    left: 37px;
+  }
+}
+
+.places-visited__checkbox--cliff + label::before {
+  @media (min-width: @desktop-width) {
+    left: 35px;
+  }
+}
+
+.places-visited__checkbox:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 18px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 4px;
+    left: 17px;
+  }
+}
+
+.places-visited__checkbox--bell:checked + label::after {
+  @media (min-width: @desktop-width) {
+    left: 36px;
+  }
+}
+
+.places-visited__checkbox--park:checked + label::after {
+  @media (min-width: @desktop-width) {
+    left: 54px;
+  }
+}
+
+.places-visited__checkbox--cliff:checked + label::after {
+  @media (min-width: @desktop-width) {
+    left: 52px;
+  }
+}
+
+.places-visited__checkbox:hover + label::before,
+.places-visited__checkbox:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+.places-visited__checkbox:active + label::before {
+  background-color: #d5d5d5;
 }
 
 .review {

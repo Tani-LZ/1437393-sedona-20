@@ -73,11 +73,13 @@
           <ul class="reviewer-contacts__list">
             <li class="reviewer-contacts__item">
               <label class="reviewer-contacts__label reviewer-contacts__label--tel label" for="telephone"><span>Контактный</span> телефон*:</label>
-              <input class="reviewer-contacts__input" type="tel" name="tel" id="telephone" placeholder="Введите телефон" required>
+              <input class="reviewer-contacts__input reviewer-contacts__input--tel" type="tel" name="tel" id="telephone" placeholder="Введите телефон" required>
+              <button class="icon-tel" type="button"></button>
             </li>
             <li class="reviewer-contacts__item">
               <label class="reviewer-contacts__label reviewer-contacts__label--email label" for="email">Электронная почта*:</label>
-              <input class="reviewer-contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              <input class="reviewer-contacts__input reviewer-contacts__input--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              <button class="icon-email" type="button"></button>
             </li>
           </ul>
         </fieldset>
@@ -102,19 +104,19 @@
           <legend class="places-visited__legend legend">Посещенные достопримечательности:</legend>
           <ul class="places-visited__list">
             <li class="places-visited__item">
-              <input class="places-visited__checkbox" type="checkbox" name="bridge" id="places-bridge" checked>
+              <input class="visually-hidden places-visited__checkbox" type="checkbox" name="bridge" id="places-bridge" checked>
               <label class="places-visited__label places-visited__label--bridge checkbox-label" for="places-bridge">Мост Дьявола</label>
             </li>
             <li class="places-visited__item">
-              <input class="places-visited__checkbox" type="checkbox" name="bell" id="places-bell" checked>
-              <label class="places-visited__label places-visited__label--bridge--bell checkbox-label" for="places-bell">Гора-Колокол</label>
+              <input class="visually-hidden places-visited__checkbox places-visited__checkbox--bell" type="checkbox" name="bell" id="places-bell" checked>
+              <label class="places-visited__label places-visited__label--bell checkbox-label" for="places-bell">Гора-Колокол</label>
             </li>
             <li class="places-visited__item">
-              <input class="places-visited__checkbox" type="checkbox" name="park" id="places-park" checked>
-              <label class="places-visited__label places-visited__label--bridge-park checkbox-label" for="places-park">Слайд-парк</label>
+              <input class="visually-hidden places-visited__checkbox places-visited__checkbox--park" type="checkbox" name="park" id="places-park" checked>
+              <label class="places-visited__label places-visited__label--park checkbox-label" for="places-park">Слайд-парк</label>
             </li>
             <li class="places-visited__item">
-              <input class="places-visited__checkbox" type="checkbox" name="cliff" id="places-cliff">
+              <input class="visually-hidden places-visited__checkbox places-visited__checkbox--cliff" type="checkbox" name="cliff" id="places-cliff">
               <label class="places-visited__label places-visited__label--cliff checkbox-label" for="places-cliff">Красные скалы</label>
             </li>
           </ul>
