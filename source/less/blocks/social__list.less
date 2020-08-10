@@ -10,6 +10,9 @@
 }
 
 .social__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
   margin-right: 6px;
@@ -24,6 +27,12 @@
   }
 }
 
-.social__link--fill path {
+.social__item:nth-child(2) {
+  width: 47px;
+}
+
+.social__icon-facebook,
+.social__icon-twitter,
+.social__icon-youtube {
   fill: @color-background;
 }
