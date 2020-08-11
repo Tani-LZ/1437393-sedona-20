@@ -7,6 +7,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 86px;
+  }
 }
 
 .social__item {
@@ -19,11 +23,11 @@
   background-color: @color-sitetheme;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @color-focus;
   }
 
   &:active {
-    background-color: #5496bd;
+    background-color: @color-active;
   }
 }
 

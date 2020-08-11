@@ -1,6 +1,14 @@
 .video {
   text-align: center;
-  margin-bottom: 49px;
+  margin-bottom: 114px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 85px;
+  }
 }
 
 .video__header {
@@ -117,5 +125,79 @@
   @media (min-width: @tablet-width) {
     bottom: 42px;
     left: 206px;
+  }
+}
+
+.video__buttons-wrapper {
+  margin: 0 auto;
+  width: 280px;
+  height: 66px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: @color-formbackground;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 648px;
+    height: 93px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+}
+
+.video__buttons {
+  .margin-padding ();
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.video__buttons--replay {
+  margin-left: 25px;
+  margin-right: 133px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 35px;
+    margin-right: 473px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 624px;
+  }
+}
+
+.video__buttons--subtitles {
+  margin-right: 31px;
+}
+
+.video__buttons:hover .video__icon-video,
+.video__buttons:focus .video__icon-video {
+  fill: @color-text;
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.3;
+  }
+}
+
+.video__buttons:active .video__icon-video {
+  fill: fade(@color-text, 30%);
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.6;
+  }
+}
+
+.video__icon-video {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-background;
   }
 }

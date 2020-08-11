@@ -50,6 +50,20 @@
   margin-top: 27px;
   .button ();
 
+  &:hover,
+  &:focus {
+    background-color: @color-focus;
+  }
+
+  &:active {
+    color: fade(@color-background, 30%);
+    background-color: @color-active;
+  }
+
+  &:disabled {
+    background-color: @color-formhover;
+  }
+
   @media (min-width: @tablet-width) {
     width: 458px;
     margin-top: 38px;
