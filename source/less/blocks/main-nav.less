@@ -150,12 +150,12 @@
 }
 
 .main-nav__list a:hover {
-  background-color: #669ec0;
+  background-color: @color-focus;
 }
 
 .main-nav__list a:active {
   color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
+  background-color: @color-active;
 }
 
 .site-list__item--logo a:hover,
@@ -212,13 +212,14 @@
 
 .site-list__item--active a {
   @media (min-width: @tablet-width) {
-    &:hover {
-      color: #604e43;
+    &:hover,
+    &:focus {
+      color: @color-mainmenu-hover;
       background-color: @color-background;
     }
 
     &:active {
-      color: fade(#766357, 30%);
+      color: fade(@color-mainmenu-active, 30%);
     }
   }
 }

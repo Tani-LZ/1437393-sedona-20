@@ -18,7 +18,7 @@
   width: 320px;
   margin: 0 auto;
   padding-bottom: 30px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     width: 440px;
@@ -72,7 +72,7 @@
   position: relative;
   .margin-padding ();
   padding-top: 23px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -153,7 +153,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 15px;
-    background-color: #f2f2f2;
+    background-color: @color-formbackground;
   }
 
   @media (min-width: @desktop-width) {
@@ -235,6 +235,7 @@
   bottom: 20px;
   left: auto;
   opacity: 0.3;
+  fill: fade(@color-heading, 30%);
 
   @media (min-width: @tablet-width) {
     bottom: 31px;
@@ -243,5 +244,6 @@
 
   @media (min-width: @desktop-width) {
     opacity: 1;
+    fill: @color-background;
   }
 }

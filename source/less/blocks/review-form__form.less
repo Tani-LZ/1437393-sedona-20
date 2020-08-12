@@ -42,7 +42,7 @@
   .margin-padding ();
   margin-bottom: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -63,7 +63,7 @@
     height: 292px;
     top: 0;
     left: -1px;
-    background-color: #dbdbdb;
+    background-color: @color-formline;
   }
 }
 
@@ -118,6 +118,10 @@
   background-color: @color-formbackground;
 }
 
+.reviewer-name__input::placeholder {
+  color: @color-heading;
+}
+
 .reviewer-name__input--name {
   width: 230px;
 
@@ -170,7 +174,7 @@
   .margin-padding ();
   margin-bottom: 20px;
   padding-bottom: 28px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -199,7 +203,7 @@
     content: "";
     width: 123px;
     height: 1px;
-    background-color: #dbdbdb;
+    background-color: @color-formline;
   }
 
   @media (min-width: @desktop-width) {
@@ -298,6 +302,10 @@
   }
 }
 
+.reviewer-contacts__input::placeholder {
+  color: @color-heading;
+}
+
 .icon-tel {
   position: absolute;
   content: "";
@@ -306,7 +314,7 @@
   right: 0;
   width: 58px;
   height: 58px;
-  background-color: #e6e6e6;
+  background-color: @color-formicons;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: top 20px right 20px;
@@ -325,7 +333,7 @@
   right: 0;
   width: 58px;
   height: 58px;
-  background-color: #e6e6e6;
+  background-color: @color-formicons;
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
   background-position: top 20px right 20px;
@@ -335,18 +343,18 @@
 .reviewer-contacts__input:focus,
 .reviewer-name__input:hover,
 .reviewer-name__input:focus {
-  background-color: #e5e5e5;
+  background-color: @color-formhover;
 }
 
 .reviewer-contacts__input:active {
   background-color: @color-background;
-  border: 4px solid #e5e5e5;
+  border: 4px solid @color-formhover;
 }
 
 .reviewer-impressions {
   .margin-padding ();
   padding-bottom: 41px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
 
   @media (min-width: @tablet-width) {
@@ -412,7 +420,7 @@
   padding-bottom: 39px;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -449,7 +457,7 @@
     content: "";
     width: 123px;
     height: 1px;
-    background-color: #dbdbdb;
+    background-color: @color-formline;
   }
 
   @media (min-width: @desktop-width) {
@@ -473,8 +481,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 960px;
-    justify-content: space-between;
+    width: 991px;
+    justify-content: flex-start;
   }
 }
 
@@ -488,9 +496,21 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 25%;
+    width: 258px;
     margin-right: 0;
     margin-bottom: 0;
+  }
+}
+
+.places-visited__item:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    width: 238px;
+  }
+}
+
+.places-visited__item:last-child {
+  @media (min-width: @desktop-width) {
+    width: 225px;
   }
 }
 
@@ -519,29 +539,9 @@
   @media (min-width: @tablet-width) {
     padding-left: 90px;
   }
-}
 
-.places-visited__label--bridge {
   @media (min-width: @desktop-width) {
-    padding-left: 81px;
-  }
-}
-
-.places-visited__label--bell {
-  @media (min-width: @desktop-width) {
-    padding-left: 100px;
-  }
-}
-
-.places-visited__label--park {
-  @media (min-width: @desktop-width) {
-    padding-left: 118px;
-  }
-}
-
-.places-visited__label--cliff {
-  @media (min-width: @desktop-width) {
-    padding-left: 116px;
+    padding-left: 97px;
   }
 }
 
@@ -560,25 +560,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 0;
-  }
-}
-
-.places-visited__checkbox--bell + label::before {
-  @media (min-width: @desktop-width) {
-    left: 20px;
-  }
-}
-
-.places-visited__checkbox--park + label::before {
-  @media (min-width: @desktop-width) {
-    left: 37px;
-  }
-}
-
-.places-visited__checkbox--cliff + label::before {
-  @media (min-width: @desktop-width) {
-    left: 35px;
+    left: 16px;
   }
 }
 
@@ -598,35 +580,17 @@
 
   @media (min-width: @desktop-width) {
     top: 4px;
-    left: 17px;
-  }
-}
-
-.places-visited__checkbox--bell:checked + label::after {
-  @media (min-width: @desktop-width) {
-    left: 36px;
-  }
-}
-
-.places-visited__checkbox--park:checked + label::after {
-  @media (min-width: @desktop-width) {
-    left: 54px;
-  }
-}
-
-.places-visited__checkbox--cliff:checked + label::after {
-  @media (min-width: @desktop-width) {
-    left: 52px;
+    left: 33px;
   }
 }
 
 .places-visited__checkbox:hover + label::before,
 .places-visited__checkbox:focus + label::before {
-  background-color: #e5e5e5;
+  background-color: @color-formhover;
 }
 
 .places-visited__checkbox:active + label::before {
-  background-color: #d5d5d5;
+  background-color: @color-checkbox;
 }
 
 .review {
@@ -635,7 +599,6 @@
 
   @media (min-width: @tablet-width) {
     width: 648px;
-    margin-bottom: 6px;
   }
 
   @media (min-width: @desktop-width) {
@@ -666,7 +629,7 @@
     content: "";
     width: 123px;
     height: 1px;
-    background-color: #dbdbdb;
+    background-color: @color-formline;
   }
 
   @media (min-width: @desktop-width) {
@@ -742,11 +705,11 @@
 
 .reviewer-impressions__radio:hover + label::before,
 .reviewer-impressions__radio:focus + label::before {
-  background-color: #e5e5e5;
+  background-color: @color-formhover;
 }
 
 .reviewer-impressions__radio:active + label::before {
-  background-color: #d5d5d5;
+  background-color: @color-checkbox;
 }
 
 .reviewer-impressions__radio:active + label::after {
@@ -757,13 +720,13 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 48px;
-  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 61px;
+    margin-top: 6px;
   }
 
   @media (min-width: @desktop-width) {
@@ -795,7 +758,22 @@
   .button ();
   text-transform: uppercase;
   border: none;
+  outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @color-focus;
+  }
+
+  &:active {
+    color: fade(@color-background, 30%);
+    background-color: @color-active;
+  }
+
+  &:disabled {
+    background-color: @color-formhover;
+  }
 
   @media (min-width: @tablet-width) {
     width: 324px;

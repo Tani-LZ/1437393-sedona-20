@@ -1,0 +1,84 @@
+.modal-failure {
+  margin: 0 auto;
+  top: 120px;
+  bottom: auto;
+  width: 320px;
+  min-height: 280px;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    min-height: 347px;
+  }
+}
+
+.modal-failure__wrapper {
+  width: 237px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+  }
+}
+
+.modal-failure__title {
+  .margin-padding ();
+  .font-main-heading ();
+  margin-top: 40px;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    line-height: 40px;
+
+  }
+}
+
+.modal-failure__text {
+  .margin-padding ();
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.modal-failure__button {
+  .font-main-heading ();
+  .margin-padding ();
+  margin: 0 auto;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  width: 180px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: @color-background;
+  background-color: @color-sitetheme;
+
+  &:hover,
+  &:focus {
+    background-color: @color-focus;
+  }
+
+  &:active {
+    color: fade(@color-background, 30%);
+    background-color: @color-active;
+  }
+
+  &:disabled {
+    background-color: @color-formhover;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+  }
+}
