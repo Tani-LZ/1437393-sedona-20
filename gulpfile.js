@@ -55,7 +55,7 @@ const watcher = () => {
 };
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
 
 const images = () => {
@@ -106,12 +106,19 @@ const copy = () => {
 
 exports.copy = copy;
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
+const { series, parallel } = require('gulp');
+const build = series(
+  clean,
+  parallel(styles)
 );
-
 exports.build = build;
+
+// const build = () => gulp.series(
+//   "clean",
+//   "copy",
+//   "css",
+//   "sprite",
+//   "html"
+// )
+//
+// exports.build = build;
