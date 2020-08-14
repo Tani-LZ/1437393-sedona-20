@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const { series, parallel } = require("gulp");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 // Styles
 
@@ -30,6 +33,14 @@ const styles = () => {
 };
 
 exports.styles = styles;
+
+const html = () => {
+  return gulp.src("source/*.html")
+  .pipe(gulp.dest("build"))
+  .pipe(sync.stream());
+}
+
+exports.html = html;
 
 // Server
 
@@ -51,12 +62,13 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 };
 
-exports.default = gulp.series(
+exports.default = (done) => series(
   build, server, watcher
-);
+)
+(done);
 
 const images = () => {
   return gulp.src("source/img/**/*.{jpg, png, svg}")
@@ -106,19 +118,9 @@ const copy = () => {
 
 exports.copy = copy;
 
-const { series, parallel } = require('gulp');
-const build = series(
+const build = (done) => series(
   clean,
-  parallel(styles)
-);
+  parallel(copy, styles, sprite, html)
+)
+(done);
 exports.build = build;
-
-// const build = () => gulp.series(
-//   "clean",
-//   "copy",
-//   "css",
-//   "sprite",
-//   "html"
-// )
-//
-// exports.build = build;
