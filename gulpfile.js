@@ -14,6 +14,8 @@ const del = require("del");
 const { series, parallel } = require("gulp");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -36,11 +38,21 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
+  .pipe(posthtml([include()]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
   .pipe(sync.stream());
 }
 
 exports.html = html;
+
+const js = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("source/js"))
+};
+
+exports.js = js;
 
 // Server
 
@@ -71,20 +83,21 @@ exports.default = (done) => series(
 (done);
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg, png, svg}")
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
+    .pipe(gulp.dest("source/img"))
 };
 
 exports.images = images;
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg, png}")
+  return gulp.src("source/img/**/*.{jpg,png}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"))
+  .pipe(gulp.dest("source/img"))
 };
 
 exports.webp = createWebp;
@@ -106,7 +119,7 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff, woof2}",
+    "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
     "source/*.ico"
@@ -120,7 +133,7 @@ exports.copy = copy;
 
 const build = (done) => series(
   clean,
-  parallel(copy, styles, sprite, html)
+  parallel(copy, styles, sprite, html, js)
 )
 (done);
 exports.build = build;
