@@ -110,7 +110,7 @@
 }
 
 .reviewer-name__input {
-  padding-left: 22px;
+  padding-left: 23px;
   padding-top: 18px;
   padding-bottom: 14px;
   .font-main-heading ();
@@ -317,11 +317,12 @@
   background-color: @color-formicons;
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
-  background-position: top 20px right 20px;
+  background-position: top 20px right 19px;
 
   @media (min-width: @desktop-width) {
     bottom: 0;
     left: 345px;
+    background-position: top 22px right 21px;
   }
 }
 
@@ -336,19 +337,26 @@
   background-color: @color-formicons;
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
-  background-position: top 20px right 20px;
+  background-position: top 20px right 21px;
+
+  @media (min-width: @desktop-width) {
+    background-position: top 23px right 22px;
+  }
 }
 
 .reviewer-contacts__input:hover,
-.reviewer-contacts__input:focus,
-.reviewer-name__input:hover,
-.reviewer-name__input:focus {
+.reviewer-name__input:hover {
   background-color: @color-formhover;
 }
 
-.reviewer-contacts__input:active {
+.reviewer-contacts__input:active,
+.reviewer-contacts__input:focus,
+.reviewer-name__input:active,
+.reviewer-name__input:focus {
   background-color: @color-background;
-  border: 4px solid @color-formhover;
+  outline: none;
+  box-shadow: inset 4px 4px 0 0 @color-formhover,
+              inset -4px -4px 0 0 @color-formhover;
 }
 
 .reviewer-impressions {
@@ -372,7 +380,7 @@
 }
 
 .reviewer-impressions__legend {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     margin-left: 17px;
@@ -402,7 +410,7 @@
 }
 
 .reviewer-impressions__label {
-  padding-left: 77px;
+  padding-left: 78px;
 
   @media (min-width: @tablet-width) {
     padding-left: 91px;
@@ -567,15 +575,16 @@
 .places-visited__checkbox:checked + label::after {
   position: absolute;
   content: "";
-  top: 5px;
-  left: 18px;
+  top: 4px;
+  left: 16px;
   width: 23px;
   height: 16px;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    left: 29px;
+    top: 3px;
+    left: 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -645,6 +654,18 @@
   .font-main-heading ();
   border: none;
   background-color: @color-formbackground;
+
+   &:hover {
+     background-color: @color-formhover;
+   }
+
+   &:focus,
+   &:active {
+     background-color: @color-background;
+     outline: none;
+     box-shadow: inset 4px 4px 0 0 @color-formhover,
+                 inset -4px -4px 0 0 @color-formhover;
+   }
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -719,7 +740,7 @@
 .button__wrapper {
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 49px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
@@ -731,6 +752,7 @@
 
   @media (min-width: @desktop-width) {
     width: 960px;
+    margin-top: 8px;
     margin-bottom: 66px;
   }
 }
