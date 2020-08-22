@@ -213,15 +213,16 @@
 .site-list__item--active a {
   @media (min-width: @tablet-width) {
     color: @color-mainmenu-active;
-      &:hover,
-      &:focus {
-        color: @color-mainmenu-hover;
-        background-color: @color-background;
-      }
 
-      &:active {
-        color: fade(@color-mainmenu-active, 30%);
-      }
+    &:hover,
+    &:focus {
+      color: @color-mainmenu-hover;
+      background-color: @color-background;
+    }
+
+    &:active {
+      color: fade(@color-mainmenu-active, 30%);
+    }
   }
 }
 
