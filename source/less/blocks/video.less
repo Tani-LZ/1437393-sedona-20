@@ -178,12 +178,20 @@
   margin-right: 31px;
 }
 
+.video__icon-video {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @color-background;
+  }
+}
+
 .video__buttons:hover .video__icon-video,
 .video__buttons:focus .video__icon-video {
   fill: @color-text;
 
   @media (min-width: @tablet-width) {
-    opacity: 0.3;
+    fill: fade(@color-background, 60%);
   }
 }
 
@@ -191,14 +199,6 @@
   fill: fade(@color-text, 30%);
 
   @media (min-width: @tablet-width) {
-    opacity: 0.6;
-  }
-}
-
-.video__icon-video {
-  fill: #5c6870;
-
-  @media (min-width: @tablet-width) {
-    fill: @color-background;
+    fill: fade(@color-background, 30%);
   }
 }

@@ -18,12 +18,19 @@
 }
 
 .social__item {
+  margin-right: 6px;
+}
+
+.social__item:nth-child(2) {
+  margin-right: 7px;
+}
+
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 46px;
   height: 48px;
-  margin-right: 6px;
   background-color: @color-sitetheme;
 
   &:hover {
@@ -33,10 +40,6 @@
   &:active {
     background-color: @color-active;
   }
-}
-
-.social__item:nth-child(2) {
-  width: 47px;
 }
 
 .social__icon-facebook,
