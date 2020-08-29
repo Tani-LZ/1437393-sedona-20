@@ -49,8 +49,8 @@
     <h1 class="visually-hidden">Фото и видео города Седоны</h1>
     <section class="photo">
       <div class="photo__header">
-        <h2 class="page-main__title photo__title">Фото и видео</h2>
-        <p class="page-main__text photo__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <h2 class="page-main__title header__title">Фото и видео</h2>
+        <p class="page-main__text header__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </div>
       <ul class="photo__list">
         <li class="photo__item photo__item--top">
@@ -100,11 +100,11 @@
           <figure class="photo__content">
             <a class="photo__link" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" @media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
-                <source media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                <source @media="(min-width: 1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                <source @media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" width="280" height="280" alt="Дорога на север">
               </picture>
             </a>
@@ -122,11 +122,11 @@
           <figure class="photo__content">
             <a class="photo__link" href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@2x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp" @media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" @media="(min-width: 768px)" srcset="img/photo-bridge-tablet@2x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
-                <source media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <source @media="(min-width: 1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source @media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="280" height="280" alt="Мост дьявола">
               </picture>
             </a>
@@ -151,7 +151,7 @@
         <div class="video__wrapper">
         <picture>
           <source type="image/webp" media="(min-width: 1280px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" @media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
           <source media="(min-width: 1280px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
@@ -193,19 +193,19 @@
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Твиттере">
               <svg class="social__icon-twitter" width="18" height="15">
-              <use xlink:href="#icon-twitter"></use></svg>
+                <use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
               <svg class="social__icon-facebook" width="9" height="19">
-              <use xlink:href="#icon-facebook"></use></svg>
+                <use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" aria-label="Мы в Ютубе">
               <svg class="social__icon-youtube" width="20" height="14">
-              <use xlink:href="#icon-youtube"></use></svg>
+                <use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
@@ -214,11 +214,12 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="copyright__logo-htmlacademy" role="img" aria-label="Сайт HTMLacademy" width="27" height="37">
-          <use xlink:href="#logo-htmlacademy"></use></svg>
+            <use xlink:href="#logo-htmlacademy"></use></svg>
         </a>
       </div>
     </div>
   </footer>
+
   <script src="js/menu.js"></script>
 
   <svg style="display: none">
