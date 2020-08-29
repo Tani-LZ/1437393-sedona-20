@@ -14,3 +14,151 @@
     width: 1200px;
   }
 }
+
+.page-header__intro {
+  position: relative;
+}
+
+.page-header__intro--index {
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 389px;
+  background-color: #e4f1f9;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 101% center;
+  z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -28px;
+    left: 0;
+    width: 768px;
+    height: 518px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1536px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -41px;
+    left: 0;
+    width: 1200px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-back-desktop@2x.jpg");
+    background-size: 2400px auto;
+  }
+}
+
+.page-header__intro--inner {
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 158px;
+  background-color: #e4f1f9;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: -1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -28px;
+    left: 0;
+    width: 768px;
+    height: 290px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 1536px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -41px;
+    left: 0;
+    width: 1200px;
+    height: 300px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2400px auto;
+    }
+  }
+}
+
+.page-header__image--index {
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  margin-left: -141px;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+    bottom: 91px;
+    margin-left: -230px;
+  }
+}
+
+.page-header__image--inner {
+  position: absolute;
+  width: 229px;
+  height: 39px;
+  bottom: 67px;
+  left: 50%;
+  margin-left: -114px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: 79px;
+    bottom: 118px;
+    margin-left: -230px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 120px;
+  }
+}
+
+.page-header__intro--index::after,
+.page-header__intro--inner::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  height: 26px;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 57px;
+    margin-left: -384px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin-left: -600px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+}
