@@ -92,10 +92,6 @@
   }
 }
 
-.reviewer-name__list {
-  position: relative;
-}
-
 .reviewer-name__list::before {
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -103,7 +99,7 @@
     width: 1px;
     height: 292px;
     bottom: 0;
-    left: 0px;
+    left: 0;
     background-color: @color-formline;
   }
 }
@@ -120,6 +116,8 @@
 }
 
 .reviewer-name__list {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     width: 100%;
     display: flex;
