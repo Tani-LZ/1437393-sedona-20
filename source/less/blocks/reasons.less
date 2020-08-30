@@ -41,7 +41,7 @@
   }
 }
 
-.resons__triangle {
+.reasons__triangle {
   width: 0;
   height: 0;
   border-left: 160px solid @color-sitetheme;
@@ -83,8 +83,10 @@
 
 .reasons__item-header--bottom {
   padding-top: 39px;
+  height: 191px;
 
   @media (min-width: @tablet-width) {
+    min-height: 256px;
     padding-top: 43px;
     padding-left: 50px;
     padding-right: 50px;
@@ -151,32 +153,63 @@
   width: 280px;
   min-height: 168px;
   margin: 0 auto;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 25px;
   border-bottom: 1px solid @color-border;
 
   @media (min-width: @tablet-width) {
-    width: 256px;
+    width: 33%;
     min-height: 256px;
     padding: 0;
     padding-top: 42px;
-    padding-left: 38px;
-    padding-right: 41px;
     border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
+    padding-top: 43px;
   }
 }
 
 .reasons__item--accent-background:last-child {
+  padding-left: 15px;
+  padding-right: 15px;
   border-bottom: none;
 
   @media (min-width: @tablet-width) {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+
+.reasons__title--accent-background {
+  @media (min-width: @tablet-width) {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 136px;
+    padding-right: 136px;
+  }
+}
+
+.reasons__text--accent-background {
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.reasons__text--accent-mid {
+  @media (min-width: @tablet-width) {
+    padding-left: 55px;
+    padding-right: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 

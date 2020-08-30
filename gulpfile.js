@@ -27,6 +27,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("./build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -49,7 +50,7 @@ exports.html = html;
 const js = () => {
   return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("source/js"))
+    .pipe(gulp.dest("build/js"))
 };
 
 exports.js = js;
@@ -75,6 +76,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("js"));
 };
 
 exports.default = (done) => series(

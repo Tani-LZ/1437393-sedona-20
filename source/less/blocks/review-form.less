@@ -11,12 +11,14 @@
   margin-top: 8px;
   margin-bottom: 20px;
   padding-bottom: 16px;
+  padding-left: 2px;
   border-bottom: 1px solid @color-formhover;
 
   @media (min-width: @tablet-width) {
     width: 435px;
     margin-top: 34px;
-    margin-bottom: 69px;
+    margin-bottom: 71px;
+    padding-left: 0;
     border-bottom: none;
   }
 
@@ -26,10 +28,794 @@
   }
 }
 
-.form-header__title {
+.review-form__title {
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 33px;
+  }
+}
+
+.review-form__form {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 678px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+.review-form__form fieldset:first-child {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.legend {
+  .font-main-heading ();
+  color: @color-heading;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.label {
+  line-height: 26px;
+}
+
+.reviewer-name {
+  width: 320px;
+  .margin-padding ();
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @color-formhover;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-bottom: 70px;
+  }
+}
+
+.reviewer-name__list::before {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 292px;
+    bottom: 0;
+    left: 0;
+    background-color: @color-formline;
+  }
+}
+
+.reviewer-name__list,
+.reviewer-contacts__list,
+.reviewer-impressions__list,
+.places-visited__list {
+  .margin-padding ();
+  margin: 0 auto;
+  width: 280px;
+  text-align: left;
+  list-style: none;
+}
+
+.reviewer-name__list {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 81px;
+  }
+}
+
+.reviewer-name__item {
+  margin-bottom: 20px;
+}
+
+.reviewer-name__legend {
+  margin-bottom: 19px;
+  margin-left: 91px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin-left: 58px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 81px;
+  }
+}
+
+.reviewer-name__input {
+  padding-left: 23px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  .font-main-heading ();
+  border: none;
+  background-color: @color-formbackground;
+}
+
+.reviewer-name__input::placeholder {
+  color: @color-heading;
+}
+
+.reviewer-name__input--name {
+  width: 230px;
+
+  @media (min-width: @tablet-width) {
+    width: 216px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 350px;
+  }
+}
+
+.reviewer-name__label--name {
+  margin-right: 9px;
+}
+
+.reviewer-name__label--surname {
+  margin-right: 10px;
+}
+
+.reviewer-name__input--surname {
+  width: 192px;
+
+  @media (min-width: @tablet-width) {
+    width: 178px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 312px;
+  }
+}
+
+.reviewer-name__label--middle-name {
+  margin-right: 13px;
+}
+
+.reviewer-name__input--middle-name {
+  width: 194px;
+
+  @media (min-width: @tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 314px;
+  }
+}
+
+.reviewer-contacts {
+  .margin-padding ();
+  margin-bottom: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid @color-formhover;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    border-bottom: none;
+  }
+}
+
+.reviewer-contacts__legend {
+  margin-left: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+}
+
+.reviewer-contacts__legend-wrapper,
+.places-visited__legend-wrapper,
+.review__legend-wrapper {
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.reviewer-contacts__left,
+.reviewer-contacts__right,
+.places-visited__left,
+.places-visited__right,
+.review__left,
+.review__right {
+  @media (min-width: @tablet-width) {
+    width: 123px;
+    height: 1px;
+    background-color: @color-formline;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+.reviewer-contacts__title,
+.places-visited__title,
+.review__title {
+  .margin-padding ();
+}
+
+.reviewer-contacts__list {
+  width: 280px;
+  .margin-padding ();
+  margin: 0 auto;
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 962px;
+    margin-top: 71px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.reviewer-contacts__item {
+  position: relative;
+  margin-bottom: 14px;
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.reviewer-contacts__label {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+.reviewer-contacts__label span {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.reviewer-contacts__label--tel {
+  margin-left: 22px;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.reviewer-contacts__label--email {
+  margin-left: 22px;
+  margin-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.reviewer-contacts__input {
+  .margin-padding ();
+  width: 280px;
+  padding-left: 22px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  .font-main-heading ();
+  border: none;
+  background-color: @color-formbackground;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+  }
+}
+
+.reviewer-contacts__input::placeholder {
+  color: @color-heading;
+}
+
+.icon-tel {
+  position: absolute;
+  content: "";
+  .margin-padding ();
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @color-formicons;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: top 20px right 19px;
+
+  @media (min-width: @desktop-width) {
+    bottom: 0;
+    left: 345px;
+    background-position: top 22px right 21px;
+  }
+}
+
+.icon-email {
+  position: absolute;
+  content: "";
+  .margin-padding ();
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @color-formicons;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: top 20px right 21px;
+
+  @media (min-width: @desktop-width) {
+    background-position: top 23px right 22px;
+  }
+}
+
+.reviewer-contacts__input:hover,
+.reviewer-name__input:hover {
+  background-color: @color-formhover;
+}
+
+.reviewer-contacts__input:active,
+.reviewer-contacts__input:focus,
+.reviewer-name__input:active,
+.reviewer-name__input:focus {
+  background-color: @color-background;
+  outline: none;
+  box-shadow: inset 4px 4px 0 0 @color-formhover, inset -4px -4px 0 0 @color-formhover;
+}
+
+.reviewer-impressions {
+  .margin-padding ();
+  padding-bottom: 41px;
+  border-bottom: 1px solid @color-formhover;
+
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin-bottom: 46px;
+    order: -1;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-bottom: 42px;
+  }
+}
+
+.reviewer-impressions__legend {
+  margin-bottom: 36px;
+  margin-left: 43px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 17px;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 201px;
+  }
+}
+
+.reviewer-impressions__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.reviewer-impressions__item {
+  margin-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.reviewer-impressions__label {
+  padding-left: 78px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 91px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 200px;
+  }
+}
+
+.places-visited {
+  .margin-padding ();
+  margin-bottom: 20px;
+  margin-top: 15px;
+  padding-bottom: 39px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid @color-formhover;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-top: 0;
+    border-bottom: none;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.places-visited__legend {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+}
+
+.places-visited__list {
+  .margin-padding ();
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 991px;
+    justify-content: flex-start;
+  }
+}
+
+.places-visited__item {
+  margin-bottom: 54px;
+
+  @media (min-width: @tablet-width) {
+    width: 45.41%;
+    margin-bottom: 60px;
+    margin-right: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 258px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.places-visited__item:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    width: 238px;
+  }
+}
+
+.places-visited__item:last-child {
+  @media (min-width: @desktop-width) {
+    width: 225px;
+  }
+}
+
+.places-visited__item:nth-child(2n) {
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.reviewer-name__item:last-child,
+.reviewer-contacts__item:last-child,
+.reviewer-impressions__item:last-child,
+.places-visited__item:last-child {
+  margin-bottom: 0;
+}
+
+.places-visited__item:nth-last-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.places-visited__label {
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 97px;
+  }
+}
+
+.places-visited__checkbox + label::before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  top: -16px;
+  left: 0;
+  background-color: @color-formbackground;
+  border-radius: 5%;
+
+  @media (min-width: @tablet-width) {
+    left: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 16px;
+  }
+}
+
+.places-visited__checkbox:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 16px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    left: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 4px;
+    left: 33px;
+  }
+}
+
+.places-visited__checkbox:hover + label::before,
+.places-visited__checkbox:focus + label::before {
+  background-color: @color-formhover;
+}
+
+.places-visited__checkbox:active + label::before {
+  background-color: @color-checkbox;
+}
+
+.review {
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+  }
+}
+
+.review__legend {
+  margin-bottom: 10px;
+  margin-left: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+}
+
+.review__text {
+  width: 279px;
+  min-height: 160px;
+  padding-top: 13px;
+  padding-left: 21px;
+  .font-main-heading ();
+  border: none;
+  background-color: @color-formbackground;
+
+  &:hover {
+    background-color: @color-formhover;
+  }
+
+  &:focus,
+  &:active {
+    background-color: @color-background;
+    outline: none;
+    box-shadow: inset 4px 4px 0 0 @color-formhover, inset -4px -4px 0 0 @color-formhover;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-top: 18px;
+    padding-left: 23px;
+  }
+}
+
+.radio-label,
+.checkbox-label {
+  display: block;
+  position: relative;
+  .font-main-heading ();
+  color: @color-heading;
+  text-transform: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reviewer-impressions__radio + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 2px;
+  width: 53px;
+  height: 53px;
+  background-color: @color-formbackground;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 18px;
+    background-color: @color-formbackground;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 125px;
+  }
+}
+
+.reviewer-impressions__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2;
+  left: 18px;
+  width: 21px;
+  height: 21px;
+  background-color: @color-text;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 140px;
+  }
+}
+
+.reviewer-impressions__radio:hover + label::before,
+.reviewer-impressions__radio:focus + label::before {
+  background-color: @color-formhover;
+}
+
+.reviewer-impressions__radio:active + label::before {
+  background-color: @color-checkbox;
+}
+
+.reviewer-impressions__radio:active + label::after {
+  opacity: 0.3;
+}
+
+.button-wrapper {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 61px;
+    margin-top: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin-top: 8px;
+    margin-bottom: 66px;
+  }
+}
+
+.review-form__required {
+  .margin-padding ();
+  line-height: 26px;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    padding-top: 20px;
+  }
+}
+
+.review-form__button {
+  .margin-padding ();
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 18px;
+  padding-bottom: 13px;
+  .button ();
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @color-focus;
+  }
+
+  &:active {
+    color: fade(@color-background, 30%);
+    background-color: @color-active;
+  }
+
+  &:disabled {
+    background-color: @color-formhover;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
   }
 }

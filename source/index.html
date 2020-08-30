@@ -41,7 +41,7 @@
       </ul>
     </nav>
     <div class="page-header__intro page-header__intro--index">
-      <img class="header-intro__image header-intro__image--index" src="img/text-sedona-index.svg" width="282" height="214" alt="Sedona-Welcome to the gorgeous">
+      <img class="page-header__image page-header__image--index" src="img/text-sedona-index.svg" width="282" height="214" alt="Sedona-Welcome to the gorgeous">
     </div>
   </header>
 
@@ -54,11 +54,11 @@
       </header>
       <ul class="advantages__list reasons">
         <li class="reasons__item reasons__item--accent reasons__item--accent-top">
-          <div class="resons__triangle"></div>
+          <div class="reasons__triangle"></div>
           <div class="reasons__item-header">
             <h3 class="reasons__title reasons__title--accent">Настоящий городок</h3>
-            <p class="reasons__number reasons__number--accent">— №1 —</p>
-            <p class="reasons__text reasons__text--accent--top">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            <p class="reasons__number">— №1 —</p>
+            <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1280px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
@@ -81,9 +81,11 @@
                 <use xlink:href="#icon-gift"></use>
               </svg>
               <h4 class="recommendations__title recommendations__title--gifts">Сувениры</h4>
-              <p class="recommendations__description recommendations__description--gifts">Не только китайского, но и местного производства!</p>
+              <p class="recommendations__description recommendations__description--gifts">
+                <span class="recommendations__description-break">Не только китайского,</span>
+                но и местного производства!</p>
             </li>
-            <li class="recommendations__item recommendation__item--burger">
+            <li class="recommendations__item recommendations__item--burger">
               <svg class="recommendations__icon-burger" aria-hidden="true" width="40" height="35">
                 <use xlink:href="#icon-burger"></use>
               </svg>
@@ -95,8 +97,8 @@
         <li class="reasons__item reasons__item--accent reasons__item--accent-bottom">
           <div class="reasons__item-header reasons__item-header--bottom">
             <h3 class="reasons__title reasons__title--accent reasons__title--accent--bottom">Там есть мост дьявола</h3>
-            <p class="reasons__number reasons__number--accent">— №2 —</p>
-            <p class="reasons__text reasons__text--accent reasons__text--accent--bottom">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <p class="reasons__number">— №2 —</p>
+            <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1280px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
@@ -108,14 +110,14 @@
           </picture>
         </li>
         <li class="reasons__item reasons__item--accent-background">
-          <h3 class="reasons__title">Небольшая площадь</h3>
+          <h3 class="reasons__title reasons__title--accent-background">Небольшая площадь</h3>
           <p class="reasons__number reasons__number--bottom">— №3 —</p>
-          <p class="reasons__text">Все интересные места находятся очень близко</p>
+          <p class="reasons__text reasons__text--accent-background">Все интересные места находятся очень близко</p>
         </li>
         <li class="reasons__item reasons__item--accent-background">
-          <h3 class="reasons__title">Красивая дорога</h3>
+          <h3 class="reasons__title reasons__title--accent-background">Красивая дорога</h3>
           <p class="reasons__number reasons__number--bottom">— №4 —</p>
-          <p class="reasons__text reasons__text--bottom">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="reasons__text reasons__text--accent-mid">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="reasons__item reasons__item--accent-background">
           <h3 class="reasons__title">Мало туристов</h3>
@@ -127,13 +129,15 @@
     <section class="hotel-search-form">
       <div class="hotel-search-form__wrapper">
         <h2 class="hotel-search-form__title">Заинтересовались?</h2>
-        <p class="hotel-search-form__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостинец в Седоне</p>
+        <p class="hotel-search-form__text">
+          <span class="hotel-search-form__text-break">Укажите предполагаемые даты поездки,</span>
+          и мы покажем вам лучшие предложения гостинец в Седоне</p>
         <a class="hotel-search-form__button button" href="#">Найти гостиницу</a>
       </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Седона на карте штата Аризоны</h2>
-          <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.1705202715!2d-112.35544184688933!3d34.8544438156372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2seg!4v1597159214940!5m2!1sen!2seg" allowfullscreen="" aria-hidden="false" width="320" height="350" title="Седона на карте штата Аризоны"></iframe>
+      <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.1705202715!2d-112.35544184688933!3d34.8544438156372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2seg!4v1597159214940!5m2!1sen!2seg" allowfullscreen="" aria-hidden="false" width="320" height="350" title="Седона на карте штата Аризоны"></iframe>
     </section>
   </main>
 
@@ -143,29 +147,29 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#" aria-label="Мы в Твиттере">
+            <a class="social__link" href="#" aria-label="Мы в Твиттере">
               <svg class="social__icon-twitter" width="18" height="15">
                 <use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#" aria-label="Мы в Фейсбуке">
+            <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
               <svg class="social__icon-facebook" width="9" height="19">
                 <use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#" aria-label="Мы в Ютубе">
+            <a class="social__link" href="#" aria-label="Мы в Ютубе">
               <svg class="social__icon-youtube" width="20" height="14">
                 <use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="social__logo-htmlacademy" role="img" aria-label="Сайт HTMLacademy" width="27" height="37">
+          <svg class="copyright__logo-htmlacademy" role="img" aria-label="Сайт HTMLacademy" width="27" height="37">
             <use xlink:href="#logo-htmlacademy"></use></svg>
         </a>
       </div>

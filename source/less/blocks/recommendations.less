@@ -23,7 +23,6 @@
   @media (min-width: @desktop-width) {
     width: 1200px;
     justify-content: flex-start;
-    padding-left: 58px;
   }
 }
 
@@ -37,6 +36,7 @@
     padding-left: 0;
     margin-left: 0;
     margin-bottom: 0;
+    width: 33%;
     display: flex;
     flex-direction: column;
   }
@@ -48,41 +48,40 @@
 
 .recommendations__item--house {
   @media (min-width: @tablet-width) {
-    width: 185px;
-    margin-left: 36px;
-    margin-right: 85px;
+    padding-right: 35px;
+    padding-left: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 282px;
-    margin-left: 0;
-    margin-right: 111px;
+    padding-right: 58px;
+    padding-left: 58px;
   }
 }
 
-.recommendation__item--burger {
+.recommendations__item--burger {
   padding-right: 70px;
 
   @media (min-width: @tablet-width) {
-    width: 155px;
-    padding-right: 0;
-    margin-right: 83px;
+    padding-left: 54px;
+    padding-right: 49px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 300px;
-    margin-right: 127px;
+    padding-right: 52px;
+    padding-left: 62px;
   }
 }
 
 .recommendations__item--gift {
   @media (min-width: @tablet-width) {
-    width: 193px;
     order: 1;
+    padding-left: 37px;
+    padding-right: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 244px;
+    padding-left: 43px;
+    padding-right: 24px;
   }
 }
 
@@ -111,6 +110,12 @@
   }
 }
 
+.recommendations__description-break {
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
 .recommendations__icon-house,
 .recommendations__icon-gift,
 .recommendations__icon-burger {
@@ -125,13 +130,13 @@
   @media (min-width: @tablet-width) {
     width: 75px;
     height: 72px;
-    left: 54px;
+    left: 90px;
     top: 60px;
   }
 
   @media (min-width: @desktop-width) {
     top: 59px;
-    left: 103px;
+    left: 161px;
   }
 }
 
@@ -142,12 +147,12 @@
   @media (min-width: @tablet-width) {
     width: 64px;
     height: 75px;
-    left: 63px;
+    left: 100px;
     top: 57px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 88px;
+    left: 174px;
   }
 }
 
@@ -158,11 +163,11 @@
   @media (min-width: @tablet-width) {
     width: 76px;
     height: 70px;
-    left: 39px;
+    left: 92px;
     top: 62px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 110px;
+    left: 165px;
   }
 }

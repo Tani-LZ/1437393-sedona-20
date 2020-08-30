@@ -41,7 +41,7 @@
       </ul>
     </nav>
     <div class="page-header__intro page-header__intro--inner">
-      <img class="header-intro__image header-intro__image--inner" src="img/text-sedona.svg" width="229" height="39" alt="Sedona-Welcome to the gorgeous">
+      <img class="page-header__image page-header__image--inner" src="img/text-sedona.svg" width="229" height="39" alt="Sedona-Welcome to the gorgeous">
     </div>
   </header>
 
@@ -49,7 +49,7 @@
     <h1 class="visually-hidden">Форма отзыва о городе Седона</h1>
     <section class="review-form">
       <div class="review-form__header">
-        <h2 class="page-main__title form-header__title">Оставьте свой отзыв</h2>
+        <h2 class="page-main__title review-form__title">Оставьте свой отзыв</h2>
         <p class="page-main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях</p>
       </div>
       <form class="review-form__form" action="https://echo.htmlacademy.ru" method="get">
@@ -71,11 +71,17 @@
           </ul>
         </fieldset>
         <fieldset class="reviewer-contacts">
-          <legend class="reviewer-contacts__legend legend">Контактная информация:</legend>
+          <legend class="reviewer-contacts__legend legend">
+            <div class="reviewer-contacts__legend-wrapper">
+              <div class="reviewer-contacts__left"></div>
+              <p class="reviewer-contacts__title">Контактная информация:</p>
+              <div class="reviewer-contacts__right"></div>
+            </div>
+          </legend>
           <ul class="reviewer-contacts__list">
             <li class="reviewer-contacts__item">
               <label class="reviewer-contacts__label reviewer-contacts__label--tel label" for="telephone"><span>Контактный</span> телефон*:</label>
-              <input class="reviewer-contacts__input reviewer-contacts__input--tel" type="tel" name="tel" id="telephone" placeholder="Введите телефон" required>
+              <input class="reviewer-contacts__input reviewer-contacts__input--tel" type="tel" name="tel" id="telephone" placeholder="Введите телефон" pattern="7[0-9]{10}" required>
               <div class="icon-tel"></div>
             </li>
             <li class="reviewer-contacts__item">
@@ -103,7 +109,13 @@
           </ul>
         </fieldset>
         <fieldset class="places-visited">
-          <legend class="places-visited__legend legend">Посещенные достопримечательности:</legend>
+          <legend class="places-visited__legend legend">
+            <div class="places-visited__legend-wrapper">
+              <div class="places-visited__left"></div>
+              <p class="places-visited__title">Посещенные достопримечательности:</p>
+              <div class="places-visited__right"></div>
+            </div>
+          </legend>
           <ul class="places-visited__list">
             <li class="places-visited__item">
               <input class="visually-hidden places-visited__checkbox" type="checkbox" name="bridge" id="places-bridge" checked>
@@ -124,11 +136,17 @@
           </ul>
         </fieldset>
         <fieldset class="review">
-          <legend class="review__legend legend">Опишите свои эмоции:</legend>
+          <legend class="review__legend legend">
+            <div class="review__legend-wrapper">
+              <div class="review__left"></div>
+              <p class="review__title">Опишите свои эмоции:</p>
+              <div class="review__right"></div>
+            </div>
+          </legend>
           <label for="review"><span class="visually-hidden">Ваш отзыв</span></label>
           <textarea class="review__text" name="review" id="review" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
-        <div class="button__wrapper">
+        <div class="button-wrapper">
           <button class="review-form__button button" type="submit">Отправить отзыв</button>
           <p class="review-form__required">* — обязательные поля</p>
         </div>
@@ -143,29 +161,29 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#" aria-label="Мы в Твиттере">
+            <a class="social__link" href="#" aria-label="Мы в Твиттере">
               <svg class="social__icon-twitter" width="18" height="15">
               <use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#" aria-label="Мы в Фейсбуке">
+            <a class="social__link" href="#" aria-label="Мы в Фейсбуке">
               <svg class="social__icon-facebook" width="9" height="19">
               <use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#" aria-label="Мы в Ютубе">
+            <a class="social__link" href="#" aria-label="Мы в Ютубе">
               <svg class="social__icon-youtube" width="20" height="14">
               <use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="social__logo-htmlacademy" role="img" aria-label="Сайт HTMLacademy" width="27" height="37">
+          <svg class="copyright__logo-htmlacademy" role="img" aria-label="Сайт HTMLacademy" width="27" height="37">
           <use xlink:href="#logo-htmlacademy"></use></svg>
         </a>
       </div>

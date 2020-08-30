@@ -2,7 +2,7 @@
   .margin-padding ();
   margin: 0 auto;
   position: relative;
-  width: 320px;
+  width: 100%;
   min-height: 56px;
   display: flex;
   flex-direction: column;
@@ -212,6 +212,8 @@
 
 .site-list__item--active a {
   @media (min-width: @tablet-width) {
+    color: @color-mainmenu-active;
+
     &:hover,
     &:focus {
       color: @color-mainmenu-hover;
