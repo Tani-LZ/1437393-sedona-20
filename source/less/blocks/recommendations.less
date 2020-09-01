@@ -3,6 +3,7 @@
   margin: 0 auto;
   width: 320px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   padding-top: 35px;
   padding-bottom: 33px;
@@ -47,6 +48,8 @@
 }
 
 .recommendations__item--house {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     padding-right: 35px;
     padding-left: 36px;
@@ -55,6 +58,31 @@
   @media (min-width: @desktop-width) {
     padding-right: 58px;
     padding-left: 58px;
+  }
+}
+
+.recommendations__item--house::before {
+  position: absolute;
+  content: "";
+  width: 39px;
+  height: 37px;
+  top: -9px;
+  left: 21px;
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 39px 37px;
+
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    height: 72px;
+    top: 60px;
+    left: 90px;
+    background-size: 75px 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 161px;
   }
 }
 
@@ -72,6 +100,31 @@
   }
 }
 
+.recommendations__item--burger::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 35px;
+  top: -6px;
+  left: 18px;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 40px 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+    height: 68px;
+    top: 63px;
+    left: 92px;
+    background-size: 76px 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 165px;
+  }
+}
+
 .recommendations__item--gift {
   @media (min-width: @tablet-width) {
     order: 1;
@@ -82,6 +135,31 @@
   @media (min-width: @desktop-width) {
     padding-left: 43px;
     padding-right: 24px;
+  }
+}
+
+.recommendations__item--gift::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 38px;
+  top: -11px;
+  left: 24px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 32px 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 64px;
+    height: 75px;
+    top: 57px;
+    left: 101px;
+    background-size: 64px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 174px;
   }
 }
 
@@ -113,61 +191,5 @@
 .recommendations__description-break {
   @media (min-width: @desktop-width) {
     display: block;
-  }
-}
-
-.recommendations__icon-house,
-.recommendations__icon-gift,
-.recommendations__icon-burger {
-  position: absolute;
-  fill: @color-sitetheme;
-}
-
-.recommendations__icon-house {
-  top: -9px;
-  left: 21px;
-
-  @media (min-width: @tablet-width) {
-    width: 75px;
-    height: 72px;
-    left: 90px;
-    top: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 59px;
-    left: 161px;
-  }
-}
-
-.recommendations__icon-gift {
-  top: -12px;
-  left: 25px;
-
-  @media (min-width: @tablet-width) {
-    width: 64px;
-    height: 75px;
-    left: 100px;
-    top: 57px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 174px;
-  }
-}
-
-.recommendations__icon-burger {
-  top: -7px;
-  left: 18px;
-
-  @media (min-width: @tablet-width) {
-    width: 76px;
-    height: 70px;
-    left: 92px;
-    top: 62px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 165px;
   }
 }
